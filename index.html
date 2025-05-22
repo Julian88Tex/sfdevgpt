@@ -29,40 +29,41 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #005ba3 0%, #003d6b 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow-x: hidden;
+            transition: background 0.3s ease;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             padding: 2rem;
             text-align: center;
             position: relative;
         }
 
         .hero-section {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(20px);
             border-radius: 24px;
-            padding: 3rem 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            padding: 1.25rem 5rem;
+            border: 3px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
             animation: fadeInUp 1s ease-out;
         }
 
         .logo {
-            width: 120px;
-            height: 120px;
+            width: 160px;
+            height: 160px;
             background: #005ba3;
             border-radius: 50%;
-            margin: 0 auto 2rem;
+            margin: 0 auto 1.25rem;
             position: relative;
             animation: pulse 2s infinite;
-            border: 4px solid #465276;
+            border: 4px solid #003d6b;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -82,7 +83,7 @@
 
         .logo::after {
             content: '⚡';
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             color: white;
             position: absolute;
             z-index: 2;
@@ -90,7 +91,7 @@
 
         .logo-text {
             position: absolute;
-            font-size: 0.58rem;
+            font-size: 0.75rem;
             font-weight: bold;
             color: white;
             text-align: center;
@@ -113,42 +114,42 @@
             display: flex;
             justify-content: center;
             gap: 1rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.75rem;
             flex-wrap: wrap;
         }
 
         .stat-badge {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.25);
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 25px;
             font-size: 0.9rem;
             font-weight: 600;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(10px);
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 800;
             color: white;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             letter-spacing: -0.02em;
         }
 
         .tagline {
-            font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 1.25rem;
+            line-height: 1.5;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .cta-section {
-            margin: 2.5rem 0;
+            margin: 1rem 0;
         }
 
         .cta-button {
@@ -184,9 +185,9 @@
         }
 
         .creator-section {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -211,13 +212,13 @@
         }
 
         .creator-text {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.95);
             font-size: 1rem;
             margin-bottom: 1rem;
         }
 
         .creator-link {
-            color: #00d4ff;
+            color: white;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
@@ -225,8 +226,8 @@
         }
 
         .creator-link:hover {
-            color: white;
-            border-bottom-color: #00d4ff;
+            color: rgba(255, 255, 255, 0.8);
+            border-bottom-color: white;
         }
 
         .floating-shapes {
@@ -241,7 +242,7 @@
 
         .shape {
             position: absolute;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
             border-radius: 50%;
             animation: float 6s ease-in-out infinite;
         }
@@ -252,6 +253,7 @@
             top: 20%;
             left: 10%;
             animation-delay: 0s;
+            transition: transform 0.3s ease;
         }
 
         .shape:nth-child(2) {
@@ -260,6 +262,7 @@
             top: 60%;
             right: 15%;
             animation-delay: 2s;
+            transition: transform 0.3s ease;
         }
 
         .shape:nth-child(3) {
@@ -268,6 +271,7 @@
             bottom: 20%;
             left: 20%;
             animation-delay: 4s;
+            transition: transform 0.3s ease;
         }
 
         @keyframes fadeInUp {
@@ -404,7 +408,7 @@
             </div>
             
             <p class="tagline">
-                Stop saying "in Apex" every time. <br>Use <strong>Salesforce Developer</strong>.
+                Stop saying "in Apex" every time.
             </p>
 
             <div class="cta-section">
@@ -440,6 +444,42 @@
         // Add smooth scroll and fade effects
         window.addEventListener('load', function() {
             document.body.style.opacity = '1';
+        });
+
+        // Interactive background that only affects the outer background and floating shapes
+        document.addEventListener('mousemove', function(e) {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            // Only change the outer background gradient
+            const hue1 = 210 + (mouseX * 10); // Blue range: 210-220
+            const hue2 = 220 + (mouseY * 10); // Blue range: 220-230
+            
+            document.body.style.background = `linear-gradient(135deg, hsl(${hue1}, 70%, 35%) 0%, hsl(${hue2}, 80%, 25%) 100%)`;
+            
+            // Only move the floating shapes in the background
+            const shapes = document.querySelectorAll('.shape');
+            shapes.forEach((shape, index) => {
+                const moveX = (mouseX - 0.5) * (15 + index * 8);
+                const moveY = (mouseY - 0.5) * (15 + index * 8);
+                shape.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
+        });
+
+        // Reset background when mouse leaves the window
+        document.addEventListener('mouseleave', function() {
+            // Smooth transition back to original colors
+            document.body.style.transition = 'background 0.8s ease';
+            document.body.style.background = 'linear-gradient(135deg, #005ba3 0%, #003d6b 100%)';
+            
+            document.querySelectorAll('.shape').forEach(shape => {
+                shape.style.transform = 'translate(0px, 0px)';
+            });
+            
+            // Remove transition after reset to allow smooth mouse movement again
+            setTimeout(() => {
+                document.body.style.transition = 'background 0.3s ease';
+            }, 800);
         });
     </script>
 </body>
