@@ -57,8 +57,8 @@
         .logo {
             width: 120px;
             height: 120px;
-            background: linear-gradient(135deg, #d0ebff 0%, #99d9ff 100%);
-            border-radius: 24px;
+            background: #005ba3;
+            border-radius: 50%;
             margin: 0 auto 2rem;
             position: relative;
             animation: pulse 2s infinite;
@@ -70,9 +70,9 @@
 
         .logo::before {
             content: '';
-            width: 70px;
-            height: 70px;
-            background: #007ad8;
+            width: 40%;
+            height: 40%;
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
             position: absolute;
             display: flex;
@@ -82,7 +82,7 @@
 
         .logo::after {
             content: '⚡';
-            font-size: 2rem;
+            font-size: 1.2rem;
             color: white;
             position: absolute;
             z-index: 2;
@@ -90,35 +90,23 @@
 
         .logo-text {
             position: absolute;
-            font-size: 0.7rem;
+            font-size: 0.58rem;
             font-weight: bold;
-            color: #465276;
+            color: white;
             text-align: center;
             line-height: 1;
         }
 
         .logo-text-top {
-            top: 8px;
+            top: 15%;
             left: 50%;
             transform: translateX(-50%);
         }
 
         .logo-text-bottom {
-            bottom: 8px;
+            bottom: 15%;
             left: 50%;
             transform: translateX(-50%);
-        }
-
-        .logo-text-left {
-            left: 8px;
-            top: 50%;
-            transform: translateY(-50%) rotate(-90deg);
-        }
-
-        .logo-text-right {
-            right: 8px;
-            top: 50%;
-            transform: translateY(-50%) rotate(90deg);
         }
 
         .stats {
@@ -322,8 +310,17 @@
             }
 
             .logo {
-                width: 100px;
-                height: 100px;
+                width: 90px;
+                height: 90px;
+                border-width: 3px;
+            }
+
+            .logo::after {
+                font-size: 0.9rem;
+            }
+
+            .logo-text {
+                font-size: 0.45rem;
             }
 
             h1 {
@@ -396,26 +393,23 @@
         <div class="hero-section">
             <div class="logo">
                 <div class="logo-text logo-text-top">SALESFORCE</div>
-                <div class="logo-text logo-text-left">‹</div>
-                <div class="logo-text logo-text-right">›</div>
                 <div class="logo-text logo-text-bottom">DEVELOPER</div>
             </div>
             
-            <h1>Salesforce Developer GPT</h1>
+            <h1>Salesforce Developer</h1>
             
             <div class="stats">
-                <span class="stat-badge">#2 Most Popular Salesforce ChatGPT</span>
+                <span class="stat-badge">#2 Salesforce ChatGPT</span>
                 <span class="stat-badge">25K+ Chats</span>
             </div>
             
             <p class="tagline">
-                Sick of having to say "in Apex" or "for Salesforce" <br>when using ChatGPT? 
-                Use <strong>Salesforce Developer</strong> instead.
+                Stop saying "in Apex" every time. <br>Use <strong>Salesforce Developer</strong>.
             </p>
 
             <div class="cta-section">
                 <a href="https://chatgpt.com/g/g-eUujZMOVa-salesforce-developer" class="cta-button" target="_blank">
-                    🚀 Try Salesforce Developer GPT
+                    🚀 Try Salesforce Developer
                 </a>
             </div>
 
