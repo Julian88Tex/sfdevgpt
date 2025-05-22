@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XSV8Z5881V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XSV8Z5881V');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salesforce Developer GPT</title>
-    <meta name="description" content="Sick of having to say 'in Apex' or 'for Salesforce' when using ChatGPT? Use Salesforce Developer instead. #2 Most Popular Salesforce ChatGPT with 25K+ chats.">
+    <title>Salesforce Developer</title>
+    <meta name="description" content="Stop saying 'in Apex' every time. #2 Salesforce ChatGPT with 25K+ chats.">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://julian88tex.github.io/sfdevgpt/">
-    <meta property="og:title" content="Salesforce Developer GPT">
-    <meta property="og:description" content="Sick of having to say 'in Apex' or 'for Salesforce' when using ChatGPT? Use Salesforce Developer instead. #2 Most Popular Salesforce ChatGPT with 25K+ chats.">
+    <meta property="og:title" content="Salesforce Developer">
+    <meta property="og:description" content="Stop saying 'in Apex' every time. #2 Salesforce ChatGPT with 25K+ chats.">
     <meta property="og:image" content="https://julian88tex.github.io/sfdevgpt/og-image.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://julian88tex.github.io/sfdevgpt/">
-    <meta property="twitter:title" content="Salesforce Developer GPT">
-    <meta property="twitter:description" content="Sick of having to say 'in Apex' or 'for Salesforce' when using ChatGPT? Use Salesforce Developer instead. #2 Most Popular Salesforce ChatGPT with 25K+ chats.">
+    <meta property="twitter:title" content="Salesforce Developer">
+    <meta property="twitter:description" content="Stop saying 'in Apex' every time. #2 Salesforce ChatGPT with 25K+ chats.">
     <meta property="twitter:image" content="https://julian88tex.github.io/sfdevgpt/og-image.png">
     
     <style>
@@ -35,7 +44,27 @@
             align-items: center;
             justify-content: center;
             overflow-x: hidden;
-            transition: background 0.3s ease;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background: linear-gradient(135deg, #005ba3 0%, #003d6b 100%);
+            }
+            20% {
+                background: linear-gradient(135deg, #0a5fa7 0%, #0a416f 100%);
+            }
+            40% {
+                background: linear-gradient(135deg, #1463ab 0%, #144573 100%);
+            }
+            60% {
+                background: linear-gradient(135deg, #1e67af 0%, #1e4977 100%);
+            }
+            80% {
+                background: linear-gradient(135deg, #1463ab 0%, #144573 100%);
+            }
+            100% {
+                background: linear-gradient(135deg, #005ba3 0%, #003d6b 100%);
+            }
         }
 
         .container {
@@ -253,7 +282,6 @@
             top: 20%;
             left: 10%;
             animation-delay: 0s;
-            transition: transform 0.3s ease;
         }
 
         .shape:nth-child(2) {
@@ -262,7 +290,6 @@
             top: 60%;
             right: 15%;
             animation-delay: 2s;
-            transition: transform 0.3s ease;
         }
 
         .shape:nth-child(3) {
@@ -271,7 +298,17 @@
             bottom: 20%;
             left: 20%;
             animation-delay: 4s;
-            transition: transform 0.3s ease;
+        }
+
+        @keyframes shapeShift {
+            0%, 100% {
+                opacity: 0.08;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.15;
+                transform: scale(1.1);
+            }
         }
 
         @keyframes fadeInUp {
@@ -444,42 +481,6 @@
         // Add smooth scroll and fade effects
         window.addEventListener('load', function() {
             document.body.style.opacity = '1';
-        });
-
-        // Interactive background that only affects the outer background and floating shapes
-        document.addEventListener('mousemove', function(e) {
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
-            
-            // Only change the outer background gradient
-            const hue1 = 210 + (mouseX * 10); // Blue range: 210-220
-            const hue2 = 220 + (mouseY * 10); // Blue range: 220-230
-            
-            document.body.style.background = `linear-gradient(135deg, hsl(${hue1}, 70%, 35%) 0%, hsl(${hue2}, 80%, 25%) 100%)`;
-            
-            // Only move the floating shapes in the background
-            const shapes = document.querySelectorAll('.shape');
-            shapes.forEach((shape, index) => {
-                const moveX = (mouseX - 0.5) * (15 + index * 8);
-                const moveY = (mouseY - 0.5) * (15 + index * 8);
-                shape.style.transform = `translate(${moveX}px, ${moveY}px)`;
-            });
-        });
-
-        // Reset background when mouse leaves the window
-        document.addEventListener('mouseleave', function() {
-            // Smooth transition back to original colors
-            document.body.style.transition = 'background 0.8s ease';
-            document.body.style.background = 'linear-gradient(135deg, #005ba3 0%, #003d6b 100%)';
-            
-            document.querySelectorAll('.shape').forEach(shape => {
-                shape.style.transform = 'translate(0px, 0px)';
-            });
-            
-            // Remove transition after reset to allow smooth mouse movement again
-            setTimeout(() => {
-                document.body.style.transition = 'background 0.3s ease';
-            }, 800);
         });
     </script>
 </body>
